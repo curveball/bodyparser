@@ -13,6 +13,6 @@ export default function bodyParser(): Middleware {
 
     return next();
 
-  }
+  };
 
 }
