@@ -41,7 +41,7 @@ describe('bodyParser middleware', () => {
 
   });
   it('should parse application/json into an object', async() => {
-  
+
     // @ts-ignore
     const request = buildRequest(
       'application/json',
@@ -54,10 +54,10 @@ describe('bodyParser middleware', () => {
     );
 
     expect(request.body).to.eql({ m: 'Hello world' });
-  
+
   });
   it('should parse application/hal+json into an object', async() => {
-  
+
     // @ts-ignore
     const request = buildRequest(
       'application/hal+json',
@@ -70,10 +70,10 @@ describe('bodyParser middleware', () => {
     );
 
     expect(request.body).to.eql({ m: 'Hello world' });
-  
+
   });
   it('should not do anything with other filetypes', async() => {
-  
+
     // @ts-ignore
     const request = buildRequest(
       'application/xml',
@@ -86,7 +86,23 @@ describe('bodyParser middleware', () => {
     );
 
     expect(request.body).to.equal(undefined);
-  
+
+  });
+  it('should map an empty body to an empty json object', async() => {
+
+    // @ts-ignore
+    const request = buildRequest(
+      'application/json',
+      ''
+    );
+
+    await bodyParser()(
+      <any>{ request },
+      async () => {}
+    );
+
+    expect(request.body).to.eql({});
+
   });
 
 });

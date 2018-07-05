@@ -6,7 +6,12 @@ export default function bodyParser(): Middleware {
 
     const type = ctx.request.type;
     if (type === 'application/json' || /^application\/(.*)\+json$/.test(type)) {
-      ctx.request.body = JSON.parse(await ctx.request.rawBody('utf-8'));
+      const body = await ctx.request.rawBody('utf-8');
+      if (body) {
+        ctx.request.body = JSON.parse(body);
+      } else {
+        ctx.request.body = {};
+      }
     } else if (type.startsWith('text/')) {
       ctx.request.body = await ctx.request.rawBody('utf-8');
     }
