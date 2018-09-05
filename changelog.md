@@ -1,3 +1,10 @@
+0.2.0 (2018-09-05)
+==================
+
+* Automatically parse HTML forms.
+* Updated to latest curveball framework version.
+
+
 0.1.0 (2018-07-05)
 ==================
 

@@ -1,4 +1,4 @@
-import Request from '@curveball/curveball/dist/node-request';
+import Request from '@curveball/core/dist/node/request';
 import bodyParser from '../src/index';
 import { expect } from 'chai';
 
@@ -62,6 +62,22 @@ describe('bodyParser middleware', () => {
     const request = buildRequest(
       'application/hal+json',
       '{ "m": "Hello world" }'
+    );
+
+    await bodyParser()(
+      <any>{ request },
+      async () => {}
+    );
+
+    expect(request.body).to.eql({ m: 'Hello world' });
+
+  });
+  it('should parse application/x-www-form-urlencoded into an object', async() => {
+
+    // @ts-ignore
+    const request = buildRequest(
+      'application/x-www-form-urlencoded',
+      'm=Hello%20world'
     );
 
     await bodyParser()(

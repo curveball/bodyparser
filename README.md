@@ -9,6 +9,7 @@ requests that have the following values as their `Content-Type` header:
 
 * `application/json`
 * `application/*+json`
+* `application/x-www-form-urlencoded`
 * `text/*`
 
 It sets the result of this parsing process to the `context.request.body`
