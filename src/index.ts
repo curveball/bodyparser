@@ -5,23 +5,29 @@ export default function bodyParser(): Middleware {
 
   return async (ctx: Context, next) => {
 
-    const type = ctx.request.type;
-    if (type === 'application/json' || /^application\/(.*)\+json$/.test(type)) {
-      parseJson(ctx);
-      return;
-    }
-
-    if (type === 'application/x-www-form-urlencoded') {
-      parseUrlEncoded(ctx);
-      return;
-    }
-    if (type.startsWith('text/')) {
-      parseText(ctx);
-    }
-
+    parse(ctx);
     return next();
 
   };
+
+}
+
+async function parse(ctx: Context) {
+
+  const type = ctx.request.type;
+  if (type === 'application/json' || /^application\/(.*)\+json$/.test(type)) {
+    parseJson(ctx);
+    return;
+  }
+
+  if (type === 'application/x-www-form-urlencoded') {
+    parseUrlEncoded(ctx);
+    return;
+  }
+  if (type.startsWith('text/')) {
+    parseText(ctx);
+    return;
+  }
 
 }
 
