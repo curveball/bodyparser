@@ -34,14 +34,14 @@
   },
   "homepage": "https://github.com/curveballjs/bodyparser#readme",
   "devDependencies": {
-    "@types/chai": "^4.1.4",
+    "@types/chai": "^4.1.6",
     "@types/mocha": "^5.2.5",
-    "@types/node": "^10.9.4",
-    "@types/sinon": "^5.0.2",
-    "chai": "^4.1.2",
+    "@types/node": "^10.11.4",
+    "@types/sinon": "^5.0.3",
+    "chai": "^4.2.0",
     "mocha": "^5.2.0",
     "nyc": "^12.0.2",
-    "sinon": "^6.2.0",
+    "sinon": "^6.3.5",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
     "typescript": "^2.9.2"
@@ -53,6 +53,6 @@
     ]
   },
   "dependencies": {
-    "@curveball/core": "^0.5.0"
+    "@curveball/core": "^0.7.0"
   }
 }
