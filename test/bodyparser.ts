@@ -2,7 +2,7 @@ import Request from '@curveball/core/dist/node/request';
 import bodyParser from '../src/index';
 import { expect } from 'chai';
 
-function buildRequest(type: string, body: string): Request {
+function buildRequest(type: string, body: string): Request<any> {
 
   const request = new Request(<any>{
     headers: {}

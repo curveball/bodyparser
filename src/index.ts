@@ -18,7 +18,7 @@ function parse(ctx: Context): Promise<void> {
     return parseJson(ctx);
   }
 
-  if (ctx.request.type === 'x-www-form-urlencoded') {
+  if (ctx.request.is('x-www-form-urlencoded')) {
     return parseUrlEncoded(ctx);
   }
   if (ctx.request.type.startsWith('text/')) {
