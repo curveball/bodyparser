@@ -14,15 +14,14 @@ export default function bodyParser(): Middleware {
 
 function parse(ctx: Context): Promise<void> {
 
-  const type = ctx.request.type;
-  if (type === 'application/json' || /^application\/(.*)\+json$/.test(type)) {
+  if (ctx.request.is('json')) {
     return parseJson(ctx);
   }
 
-  if (type === 'application/x-www-form-urlencoded') {
+  if (ctx.request.is('x-www-form-urlencoded')) {
     return parseUrlEncoded(ctx);
   }
-  if (type.startsWith('text/')) {
+  if (ctx.request.type.startsWith('text/')) {
     return parseText(ctx);
   }
   return Promise.resolve();

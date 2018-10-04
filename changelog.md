@@ -1,4 +1,10 @@
-0.2.2  (2018-09-05)
+0.3.0 (2018-10-04)
+==================
+
+* Updated to curveball 0.7.0 API.
+
+
+0.2.2 (2018-09-05)
 ==================
 
 * Fixed bug: Body parsing wasn't awaited.
