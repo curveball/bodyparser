@@ -1,3 +1,8 @@
+0.4.3 (2019-09-13)
+==================
+
+* Previous release was a bust. Actually updated to curveball 0.9.0 API
+
 0.4.2 (2019-09-13)
 ==================
 

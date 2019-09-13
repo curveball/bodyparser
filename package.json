@@ -1,6 +1,6 @@
 {
   "name": "@curveball/bodyparser",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "A curveball middleware for parsing JSON and Text bodies.",
   "main": "dist/index.js",
   "scripts": {
@@ -53,6 +53,6 @@
     ]
   },
   "dependencies": {
-    "@curveball/core": "^0.8.6"
+    "@curveball/core": "^0.9.0"
   }
 }
