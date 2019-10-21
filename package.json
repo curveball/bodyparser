@@ -33,6 +33,9 @@
     "url": "https://github.com/curveballjs/bodyparser/issues"
   },
   "homepage": "https://github.com/curveballjs/bodyparser#readme",
+  "peerDependency": {
+    "@curveball/core": "^0.9.0"
+  },
   "devDependencies": {
     "@types/chai": "^4.2.2",
     "@types/mocha": "^5.2.7",
@@ -51,8 +54,5 @@
     "extension": [
       ".ts"
     ]
-  },
-  "dependencies": {
-    "@curveball/core": "^0.9.0"
   }
 }
