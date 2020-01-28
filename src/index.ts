@@ -1,5 +1,6 @@
 import { Context, Middleware } from '@curveball/core';
 import qs from 'querystring';
+import { BadRequest } from '@curveball/http-errors';
 
 export default function bodyParser(): Middleware {
 
@@ -29,12 +30,28 @@ function parse(ctx: Context): Promise<void> {
 }
 
 async function parseJson(ctx: Context) {
+
   const body = await ctx.request.rawBody('utf-8');
+
   if (body) {
-    ctx.request.body = JSON.parse(body);
+
+    try {
+  
+      await ctx.request.rawBody('utf-8');
+      ctx.request.body = JSON.parse(body);
+  
+    } catch (e) {
+      
+      throw new BadRequest('Unable to parse JSON: ' + e.message)
+  
+    }
+
   } else {
+
     ctx.request.body = {};
+    
   }
+
 }
 
 async function parseText(ctx: Context) {
