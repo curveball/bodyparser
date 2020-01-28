@@ -1,6 +1,6 @@
 import { Context, Middleware } from '@curveball/core';
-import qs from 'querystring';
 import { BadRequest } from '@curveball/http-errors';
+import qs from 'querystring';
 
 export default function bodyParser(): Middleware {
 
@@ -36,20 +36,20 @@ async function parseJson(ctx: Context) {
   if (body) {
 
     try {
-  
+
       await ctx.request.rawBody('utf-8');
       ctx.request.body = JSON.parse(body);
-  
+
     } catch (e) {
-      
-      throw new BadRequest('Unable to parse JSON: ' + e.message)
-  
+
+      throw new BadRequest('Unable to parse JSON: ' + e.message);
+
     }
 
   } else {
 
     ctx.request.body = {};
-    
+
   }
 
 }
