@@ -1,6 +1,13 @@
 Changelog
 =========
 
+0.4.5 (2020-01-28)
+------------------
+
+* Send a better HTTP status code when the submitted JSON is not valid
+* Add test case for when JSON is not valid
+
+
 0.4.4 (2020-01-05)
 ------------------
 
