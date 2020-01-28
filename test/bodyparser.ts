@@ -1,6 +1,7 @@
 import bodyParser from '../src/index';
 import { expect } from 'chai';
 import { mwInvoke, buildRequest } from './util';
+import { BadRequest } from '@curveball/http-errors'
 
 describe('bodyParser middleware', () => {
 
@@ -93,6 +94,31 @@ describe('bodyParser middleware', () => {
     );
 
     expect(request.body).to.eql({});
+
+  });
+  it('should return 400 Bad Request status when JSON is not valid', async() => {
+
+    const request = buildRequest(
+      'application/json',
+      '{ %@#D: asdddd2w22!~@# }'
+    );
+
+    let hasThrown = false;
+
+    try {
+
+      await mwInvoke(
+        bodyParser(),
+        request
+      );
+    } catch (err) {
+
+      hasThrown = true;
+      expect(err).to.be.an.instanceOf(BadRequest);
+
+    }
+
+    expect(hasThrown).to.equal(true);
 
   });
 
