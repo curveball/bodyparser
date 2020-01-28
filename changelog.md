@@ -4,7 +4,7 @@ Changelog
 0.4.5 (2020-01-28)
 ------------------
 
-* Send a better HTTP status code when the submitted JSON is not valid
+* Send 400 Bad Request when the submitted JSON is not valid
 * Add test case for when JSON is not valid
 
 
