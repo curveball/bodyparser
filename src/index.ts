@@ -37,7 +37,6 @@ async function parseJson(ctx: Context) {
 
     try {
 
-      await ctx.request.rawBody('utf-8');
       ctx.request.body = JSON.parse(body);
 
     } catch (e) {
