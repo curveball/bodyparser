@@ -1,8 +1,6 @@
 Curveball Body Parser
 =====================
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/curveballjs/bodyparser.svg)](https://greenkeeper.io/)
-
 This package is a middleware for [Curveball][1]. It helps parsing JSON and
 Text request bodies.
 
@@ -51,4 +49,4 @@ API
 The default export for this package is the `bodyParser` function. When called,
 this function returns a middleware.
 
-[1]: https://github.com/curveballjs/
+[1]: https://github.com/curveball/
