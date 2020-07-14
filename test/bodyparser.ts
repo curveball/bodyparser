@@ -1,7 +1,7 @@
 import bodyParser from '../src/index';
 import { expect } from 'chai';
 import { mwInvoke, buildRequest } from './util';
-import { BadRequest } from '@curveball/http-errors'
+import { BadRequest } from '@curveball/http-errors';
 
 describe('bodyParser middleware', () => {
 
@@ -52,7 +52,6 @@ describe('bodyParser middleware', () => {
   });
   it('should parse application/x-www-form-urlencoded into an object', async() => {
 
-    // @ts-ignore
     const request = buildRequest(
       'application/x-www-form-urlencoded',
       'm=Hello%20world'
