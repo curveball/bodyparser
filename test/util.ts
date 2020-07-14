@@ -9,7 +9,7 @@ export function buildRequest(type: string, body: string): MemoryRequest<any> {
     body,
   );
 
-  // @ts-ignore
+  // @ts-expect-error trust me on this
   request.rawBody = async (encoding) => {
     if (typeof encoding !== 'undefined') {
       return body;
