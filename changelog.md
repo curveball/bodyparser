@@ -1,6 +1,12 @@
 Changelog
 =========
 
+0.4.8 (2021-02-18)
+------------------
+
+* Attempting releasing on github packages again.
+* No changes
+
 0.4.7 (2021-02-18)
 ------------------
 
