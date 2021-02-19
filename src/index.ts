@@ -1,6 +1,6 @@
 import { Context, Middleware } from '@curveball/core';
 import { BadRequest } from '@curveball/http-errors';
-import qs from 'querystring';
+import * as qs from 'querystring';
 
 export default function bodyParser(): Middleware {
 
