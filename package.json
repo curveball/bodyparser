@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/curveball/bodyparser#readme",
   "devDependencies": {
-    "@curveball/core": "^0.14.3",
+    "@curveball/core": "^0.16.2",
     "@types/chai": "^4.2.15",
     "@types/mocha": "^8.2.1",
     "@types/node": "^10.17.53",
@@ -60,7 +60,7 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "@curveball/core": ">=0.9 <1"
+    "@curveball/core": ">=0.16.2 <1"
   },
   "mocha": {
     "require": "ts-node/register",
