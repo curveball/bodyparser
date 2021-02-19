@@ -1,11 +1,19 @@
 Changelog
 =========
 
+0.4.9 (2021-02-18)
+------------------
+
+* Attempting releasing on github packages again (3rd attempt).
+* No functional changes
+
+
 0.4.8 (2021-02-18)
 ------------------
 
 * Attempting releasing on github packages again.
-* No changes
+* No functional changes
+
 
 0.4.7 (2021-02-18)
 ------------------
