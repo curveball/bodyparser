@@ -25,7 +25,7 @@ export function buildRequest(type: string, body: string): MemoryRequest<any> {
 
 export async function mwInvoke(mw: Middleware, request: Request) {
 
-  await invokeMiddlewares(<any>{ request }, [mw]);
+  await invokeMiddlewares({ request } as any, [mw]);
 
 }
 
