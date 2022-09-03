@@ -1,10 +1,11 @@
-import { MemoryRequest, invokeMiddlewares, Middleware, Request } from '@curveball/core';
+import { MemoryRequest, invokeMiddlewares, Middleware, Request } from '@curveball/kernel';
 
 export function buildRequest(type: string, body: string): MemoryRequest<any> {
 
   const request = new MemoryRequest(
     'GET',
     '/',
+    'http://localhost',
     {},
     body,
   );
