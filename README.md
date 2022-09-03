@@ -28,7 +28,7 @@ Getting started
 ---------------
 
 ```typescript
-import { Application } from '@curveball/curveball';
+import { Application } from '@curveball/core';
 import bodyParser from '@curveball/bodyparser';
 
 const app = new Application();
@@ -49,4 +49,4 @@ API
 The default export for this package is the `bodyParser` function. When called,
 this function returns a middleware.
 
-[1]: https://github.com/curveball/
+[1]: https://github.com/curveball/core

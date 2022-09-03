@@ -1,4 +1,4 @@
-import { Context, Middleware } from '@curveball/core';
+import { Context, Middleware } from '@curveball/kernel';
 import { BadRequest } from '@curveball/http-errors';
 import * as qs from 'querystring';
 
@@ -39,7 +39,7 @@ async function parseJson(ctx: Context) {
 
       ctx.request.body = JSON.parse(body);
 
-    } catch (e) {
+    } catch (e:any) {
 
       throw new BadRequest('Unable to parse JSON: ' + e.message);
 
