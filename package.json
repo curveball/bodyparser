@@ -83,5 +83,8 @@
     "extension": [
       ".ts"
     ]
+  },
+  "dependencies": {
+    "2": "^3.0.0"
   }
 }
