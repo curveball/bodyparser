@@ -1,6 +1,6 @@
-import bodyParser from '../src/index';
+import bodyParser from '../src/index.js';
 import { expect } from 'chai';
-import { mwInvoke, buildRequest } from './util';
+import { mwInvoke, buildRequest } from './util.js';
 import { BadRequest } from '@curveball/http-errors';
 
 describe('bodyParser middleware', () => {
