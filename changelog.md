@@ -1,6 +1,12 @@
 Changelog
 =========
 
+0.6.1 (????-??-??)
+------------------
+
+* A unneeded dependency named '2' was accidentally added
+
+
 0.6.0 (2023-02-13)
 ------------------
 
@@ -73,8 +79,8 @@ Changelog
 0.4.6 (2020-02-05)
 ------------------
 
-* Major bug fix. 0.4.5 was completely unusable due to the middleware
-  attempting to read the body twice.
+* Major bug fix. 0.4.5 was completely unusable due to the middleware attempting
+  to read the body twice.
 
 
 0.4.5 (2020-01-28)
@@ -96,6 +102,7 @@ Changelog
 
 * Previous release was a bust. Actually updated to curveball 0.9.0 API
 
+
 0.4.2 (2019-09-13)
 ------------------
 
@@ -107,10 +114,12 @@ Changelog
 
 * Updated to curveball 0.8.6 API
 
+
 0.4.0 (2018-10-04)
 ------------------
 
 * Updated to curveball 0.8.0 API.
+
 
 0.3.0 (2018-10-04)
 ------------------
