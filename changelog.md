@@ -1,10 +1,11 @@
 Changelog
 =========
 
-0.6.0 (????-??-??)
+0.6.0 (2023-02-13)
 ------------------
 
 * Now has a ESM and CommonJS build.
+* No longer supports Node 14. Please upgrade to Node 16 or later.
 
 
 0.5.0 (2022-09-03)
