@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.6.1 (????-??-??)
+0.6.1 (2023-02-14)
 ------------------
 
 * A unneeded dependency named '2' was accidentally added
