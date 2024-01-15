@@ -28,7 +28,8 @@
     "lint": "make lint",
     "fix": "make fix",
     "tsc": "tsc",
-    "start": "make start"
+    "start": "make start",
+    "build": "make build"
   },
   "repository": {
     "type": "git",
